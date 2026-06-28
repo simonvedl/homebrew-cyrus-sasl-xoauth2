@@ -24,8 +24,10 @@ Following the comment in this issue [Using on Mac OS X #9](https://github.com/mo
 ```
 brew tap simonvedl/cyrus-sasl-xoauth2
 brew trust simonvedl/cyrus-sasl-xoauth2
-brew install cyrus-sasl-xoauth2
+brew install --HEAD cyrus-sasl-xoauth2
 ```
+
+Set this variable before running `mbsync`
 
 ```
 SASL_PATH=$(brew --prefix)/opt/cyrus-sasl/lib/sasl2:$(brew --prefix)/opt/cyrus-sasl-xoauth2/lib/sasl2
