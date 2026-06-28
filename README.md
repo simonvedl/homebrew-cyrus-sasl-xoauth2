@@ -17,6 +17,20 @@ FYI: if you are forced to use XOAUTH2-enabled SMTP / IMAP servers by your employ
 sudo make install
 ```
 
+### Install via Homebrew on Mac OS
+
+Following the comment in this issue [Using on Mac OS X #9](https://github.com/moriyoshi/cyrus-sasl-xoauth2/issues/9#issuecomment-2568755701), I found this worked for me to get `mbsync` working. This repo is setup so that it can be used with Homebrew
+
+```
+brew tap simonvedl/cyrus-sasl-xoauth2
+brew trust simonvedl/cyrus-sasl-xoauth2
+brew install cyrus-sasl-xoauth2
+```
+
+```
+SASL_PATH=$(brew --prefix)/opt/cyrus-sasl/lib/sasl2:$(brew --prefix)/opt/cyrus-sasl-xoauth2/lib/sasl2
+```
+
 ## Server-side configuration
 
 ### auxprops
